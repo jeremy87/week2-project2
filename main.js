@@ -1,11 +1,52 @@
 // JavaScript Looping Exercise
 
 // 1. Output each item in the following Array to your console:
-var livingRoom = ['couch', 'lamp', 'rug', 'shelf'];
+
+ var livingRoom = ['couch', 'lamp', 'rug', 'shelf'];
+
+	 for(i=0; i<livingRoom.length; i++) {
+		console.log(livingRoom[i]);
+	 }
+
+	//or
+
+	 var livingRoom = ['couch', 'lamp', 'rug', 'shelf']; 
+
+	 while(livingRoom < livingroom.length) {
+		 console.log(livingroom[i])
+		 counter++;
+	 }
+
 
 // 2. Using a loop, log numbers 22-33 in the console.
 
+	for(i=22; i<=33; i++) {
+		console.log(i)
+	}
+
+	//or
+
+	var counter = 22;
+
+	while(counter < 34) {
+		console.log(counter)
+		counter++;
+	}
+
 // 3. Using a similar loop, log numbers 75 to 100, only in increments of five.
+
+	for(i=75; i<=100; i+=5) {
+		console.log(i)
+	}
+
+	//or
+
+	var counter = 75;
+
+	while(counter < 101) {
+		console.log(counter)
+		counter+5;
+	}
 
 // 4. Write a while loop that logs "This is how a professional loops." to the console 5 times.
 //     Use this as an example:
@@ -19,12 +60,40 @@ var livingRoom = ['couch', 'lamp', 'rug', 'shelf'];
 
 //        console.log(counter);
 
+	var counter = 0;
+
+	while(counter < 5) {
+		console.log("This is how a professional loops")
+		counter++;
+	}
+
 // 5. Write a conditional statement to find the largest of the numbers in the array provided.
-var largestNum = [-5, -2, -6, 0, -1]
+	
+	var largestNum = [-5, -2, -6, 0, -1]
+	var big = largestNum[0];
+
+	for(i=0; i<largestNum.length; i++){
+		if(largestNum[i] > big){
+			big = largestNum[i]
+		}
+	}
+	console.log("The largest number is " + big);
 
 // 6. Separately, use both a for loop and while loop to do the same thing.
 //     Print out the sentence "At home, I have _____ cats." Use the number from your counter to fill in the number.
 //     The numbers should range from 10 to 100, in increments of 25.
+
+	for(i=10; i<=100; i+=25) {
+		console.log("At home, I have " + i + " cats.")
+	}
+
+	var counter = 10;
+
+	while(counter < 100) {
+		console.log("At home, I have " + counter + " cats.")
+		counter += 25;
+	}
+
 
 // 7. Given the following Array, console log 'Even' if the number is even, 'Even and greater than 10' if the
 //    number is even and greater than 10, and 'Odd' if the number is odd.
@@ -35,8 +104,18 @@ var numArray = [2, 17, 9, 24, 8];
 var primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97,];
 var primeArray = [];
 
+	for(i=0; i<prime.length; i+=3) {
+		primeArray.push(primes[1]);
+		}
+
+	console.log(primeArray)
+
 // 9. Prompt a user to pick either a number or a word. Create a script that alerts the user whether they chose a number or a word.
 // Hint: Google 'typeof'
+
+	var choice = prompt("Enter a word or a number")
+
+
 
 // 10. Write a loop that outputs the following to the console:
 // #
@@ -47,16 +126,43 @@ var primeArray = [];
 // ######
 // #######
 
+	var count = 0;
+	var pound = "#";
+
+	while(count < 8) {
+		console.log(pound)
+		pound = pound + "#"
+		count++
+	}
+
+	//or
+
+	var triangle = "";
+	for(i=0; i<=7; i++) {
+		triangle += "#";
+		console.log(triangle);
+	}
 
 // RO SHAM BO!
 // We're going to create a paper, rock, scissors game that prompts you for your choice and allows the computer to
 // randomly choose. You will use an alert to define the winner.
 
 // 11. Use a variable called "human" to prompt the user to type their choice.
+
+	var human = prompt("Chose one: Rock, Paper or Scissors")
+
 // 12. Define an array called "choices" that consists of "paper", "rock", and "scissors".
+
+	var choices = ['rock', 'paper', 'scissors'];
+
 // 13. Define a variable called "computer" and use Math.random to allow the computer to randomly select a number.
 //    For reference:
 //    Math.random gives you a random number between 0 and 1, which is different each time you call it.
+
+	var computer = Math.random();
+	console.log(computer)
+
+
 // 14. Let's start our conditional statement. Start by reassigning the computer variable to "rock" if the random number
 //    falls between 0 and .33. Run the code until the console prints out "rock" instead of the number.
 //    In English, it will look like this:
@@ -64,6 +170,17 @@ var primeArray = [];
 //       if the number is between 0 and 33
 //          computer = "rock"
 //       log computer to the console
+
+	if(0 < computer && computer <= .33) {
+		computer = choice[0];
+	}
+	else if(.33 < computer && computer <= .66){
+		computer = choices[1];
+	}
+	else if(.66 < computer && computer < 1){
+		computer = choice[2];
+	}
+
 // 15. Now add the following conditionals to the same statement:
 //    If the random number is between .34 and .66, set the computer variable to "paper".
 //    If the random number is between .67 and 1, set the computer variable to "scissors". (Who the hell seriously chooses scissors first?)
